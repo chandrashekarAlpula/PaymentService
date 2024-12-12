@@ -23,4 +23,10 @@ public class PaymentController {
                 initiatePaymentDto.getAmount());
     }
 
+    @PostMapping("webhook")
+    public String webhhookListner(@RequestBody String webhookEvent){
+        System.out.println("webhook Listener event received: " + webhookEvent);
+        return "OK";
+    }
+
 }
