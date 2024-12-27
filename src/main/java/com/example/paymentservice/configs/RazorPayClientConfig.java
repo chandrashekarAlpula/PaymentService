@@ -18,7 +18,7 @@ public class RazorPayClientConfig {
     private String razorPaySecret;
 
     @Bean
-    RazorpayClient razorpayClient() throws RazorpayException {
+    RazorpayClient CreateRazorpayClient() throws RazorpayException {
         return new RazorpayClient(razorPayKey, razorPaySecret);
     }
 }
